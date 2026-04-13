@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>لوحة التحكم</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+
+    <h1 class="logo">دورلي حاجتي</h1>
+
+  <nav>
+    <ul id="navList">
+        
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="products.html">كراكيب</a></li>
+        <li><a href="add-item.html">أضف منتج</a></li>
+        <li><a href="talent-grid.html">الفيديوهات</a></li>
+        <li><a href="talents.html">المواهب</a></li>
+        <li><a href="contact.html">تواصل معنا</a></li>
+        
+        <!-- زر الأدمن (هيظهر فقط لو Admin) -->
+        <li id="adminBtn" style="display:none;">
+            <a href="admin.html">🛠 لوحة التحكم</a>
+        </li>
+        
+    </ul>
+</nav>
+
+</header>
+
+<!-- ================= CONTENT ================= -->
+<section class="container">
+    
+    <h2>📥 فيديوهات في الانتظار</h2>
+    <div id="pending"></div>
+    
+    <h2>✔ فيديوهات مقبولة</h2>
+    <div id="approved"></div>
+
+</section>
+<script defer src="admin.js"></script>
+<script src="navbar.js"></script>
+</body>
+</html>

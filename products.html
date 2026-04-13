@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منتجات الانتيكات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar"> 
+        <h1 class="logo">كراكيب</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="products.html" class="active">كراكيب</a></li>
+                <li><a href="add-item.html">أضف منتج</a></li>
+                <li><a href="talents.html">المواهب</a></li>
+                <li><a href="talent-grid.html">الفيديوهات</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+                <li id="adminLink" style="display:none;">
+                <a href="admin.html">🛠 لوحة التحكم</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container main-content">
+        <section class="top-bar">
+            <div class="top-left">
+                <h2>منتاجتنا المميزة</h2>
+                <p class="sub">اختيار يدوي لأجمل القطع</p>
+            </div>
+                <div class="top-right">
+                 <div class="search-bar">
+                    <select id="categoryFilter">
+                    <option value="">كل الفئات</option>
+                    <option value="خشب">خشب</option>
+                    <option value="هدوم">هدوم</option>
+                    <option value="ورق">ورق</option>
+                    </select>
+                    <input id="search" type="search" placeholder="ابحث عن قطعة..." aria-label="ابحث عن القطعة">
+                </div>
+            </div>
+        </section>
+
+        <section class="products-grid" id="products">
+            <article class="product-card fade-up">
+                <div class="img-wrap">
+                    <img src="image/pexels-iremnurozturk-34363887.jpg" alt="تحفة نحاسية - منتج رقم 1">
+
+                </div>
+                <div class="card-body">
+                    <h3 class="product-title">كراسي ومكاتب خشب استعمال خفيف</h3>
+                    <p class="product-meta">الفئة : خشب</p>
+                    <div class="card-footer">
+                        <span class="price">$120</span>
+                        <button class="btn details">شراء</button>
+                        <button class="btn details">استخدام</button>
+                    </div>
+                </div>
+            </article>
+            <article class="product-card fade-up">
+                <div class="img-wrap">
+                    <img src="image/pexels-sam-lion-5709661.jpg" alt="تحفة نحاسية - منتج رقم 2">
+
+                </div>
+                <div class="card-body">
+                    <h3 class="product-title">ملابس حريمي فساتين , بلوزات , تيشرتات حريمي جودة عالية</h3>
+                    <p class="product-meta">الفئة : هدوم</p>
+                    <div class="card-footer">
+                        <span class="price">$120</span>
+                        <button class="btn details">شراء</button>
+                        <button class="btn details">استخدام</button>
+                    </div>
+                </div>
+            </article>
+            <article class="product-card fade-up">
+                <div class="img-wrap">
+                    <img src="image/pexels-pixabay-158743.jpg" alt="تحفة نحاسية - منتج رقم 3">
+
+                </div>
+                <div class="card-body">
+                    <h3 class="product-title">اوراق للأستخدام في الزينة</h3>
+                    <p class="product-meta">الفئة : ورق</p>
+                    <div class="card-footer">
+                        <span class="price">$100</span>
+                        <button class="btn details">شراء</button>
+                        <button class="btn details">استخدام</button>
+                    </div>
+                </div>
+            </article>
+            <article class="product-card fade-up">
+                <div class="img-wrap">
+                    <img src="image/pexels-marina-zasorina-8624465.jpg" alt="تحفة نحاسية - منتج رقم 4">
+
+                </div>
+                <div class="card-body">
+                    <h3 class="product-title">كراسي ومكاتب خشب استعمال خفيف</h3>
+                    <p class="product-meta">الفئة : خشب</p>
+                    <div class="card-footer">
+                        <span class="price">$120</span>
+                        <button class="btn details">شراء</button>
+                        <button class="btn details">استخدام</button>
+                    </div>
+                </div>
+            </article>
+            <article class="product-card fade-up">
+                <div class="img-wrap">
+                    <img src="image/pexels-pixabay-325876.jpg" alt="تحفة نحاسية - منتج رقم 5">
+
+                </div>
+                <div class="card-body">
+                    <h3 class="product-title">ملابس رسمية بدلة , قميص جودة عالية</h3>
+                    <p class="product-meta">الفئة : هدوم</p>
+                    <div class="card-footer">
+                        <span class="price">$120</span>
+                        <button class="btn details">شراء</button>
+                        <button class="btn details">استخدام</button>
+                    </div>
+                </div>
+            </article>
+            <article class="product-card fade-up">
+                <div class="img-wrap">
+                    <img src="image/pexels-anniroenkae-2457278.jpg" alt="تحفة نحاسية - منتج رقم 6">
+
+                </div>
+                <div class="card-body">
+                    <h3 class="product-title">اوراق للأستخدام في الزينة</h3>
+                    <p class="product-meta">الفئة : ورق</p>
+                    <div class="card-footer">
+                        <span class="price">$100</span>
+                        <button class="btn details">شراء</button>
+                        <button class="btn details">استخدام</button>
+                    </div>
+                </div>
+            </article>
+            <article class="product-card fade-up">
+                <div class="img-wrap">
+                    <img src="image/pexels-rachel-claire-5865411.jpg" alt="تحفة نحاسية - منتج رقم 7">
+
+                </div>
+                <div class="card-body">
+                    <h3 class="product-title">كراسي ومكاتب خشب استعمال خفيف</h3>
+                    <p class="product-meta">الفئة : خشب</p>
+                    <div class="card-footer">
+                        <span class="price">$120</span>
+                        <button class="btn details">شراء</button>
+                        <button class="btn details">استخدام</button>
+                    </div>
+                </div>
+            </article>
+            <article class="product-card fade-up">
+                <div class="img-wrap">
+                    <img src="image/pexels-nietjuhart-934069.jpg" alt="تحفة نحاسية - منتج رقم 8">
+
+                </div>
+                <div class="card-body">
+                    <h3 class="product-title">ملابس رجالي جودة عالية</h3>
+                    <p class="product-meta">الفئة : هدوم</p>
+                    <div class="card-footer">
+                        <span class="price">$120</span>
+                        <button class="btn details">شراء</button>
+                        <button class="btn details">استخدام</button>
+                    </div>
+                </div>
+            </article>
+            <article class="product-card fade-up">
+                <div class="img-wrap">
+                    <img src="image/pexels-padrinan-194094.jpg" alt="تحفة نحاسية - منتج رقم 9">
+
+                </div>
+                <div class="card-body">
+                    <h3 class="product-title">اوراق للأستخدام في الزينة</h3>
+                    <p class="product-meta">الفئة : ورق</p>
+                    <div class="card-footer">
+                        <span class="price">$100</span>
+                        <button class="btn details">شراء</button>
+                        <button class="btn details">استخدام</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; سوق الأنتيكات - كل الحقوق محفوظه 2025 \ 2026</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+            <script>
+            document.addEventListener("DOMContentLoaded", () => {
+            const container = document.getElementById("products");
+             const storedProducts = JSON.parse(localStorage.getItem("products")) || [];
+
+              storedProducts.forEach(prod => {
+              const productCard = document.createElement("article");
+                   productCard.classList.add("product-card", "fade-up");
+
+              productCard.innerHTML = `
+             <div class="img-wrap">
+                <img src="${prod.image}" alt="${prod.name}">
+                  </div>
+                  <div class="card-body">
+                      <h3 class="product-title">${prod.name}</h3>
+                      <p class="product-meta">الفئة: ${prod.category}</p>
+                     <div class="card-footer">
+                        <span class="price">${prod.price} ج.م</span>
+                        <button class="btn details">عرض التفاصيل</button>
+                </div>
+                  </div>
+                  `;
+                    container.appendChild(productCard);
+             });
+           });
+        </script>
+<script src="navbar.js"></script>
+</body>
+</html>

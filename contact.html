@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا | دورلي حاجتي</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+    <!-- ▬▬▬ NAVBAR ▬▬▬ -->
+    <header class="navbar">
+        <h1 class="logo">تواصل معنا</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="products.html">كراكيب</a></li>
+                <li><a href="add-item.html">أضف منتج</a></li>
+                <li><a href="talents.html">المواهب</a></li>
+                <li><a href="talent-grid.html">الفيديوهات</a></li>
+                <li><a href="contact.html" class="active">تواصل معنا</a></li>
+                <li id="adminLink" style="display:none;">
+                <a href="admin.html">🛠 لوحة التحكم</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ▬▬▬ MAIN SECTION ▬▬▬ -->
+    <main class="container contact-section">
+
+        <div class="contact-box">
+
+            <!-- ◼◼ نموذج التواصل ◼◼ -->
+            <form id="contactForm" class="contact-form">
+                <h2>ارسل لنا رسالة</h2>
+                <p class="sub">نحن جاهزون للرد عليك ومساعدتك في أي وقت</p>
+
+                <div class="form-group">
+                    <label for="name">الاسم</label>
+                    <input type="text" id="name" placeholder="اكتب اسمك..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني</label>
+                    <input type="email" id="email" placeholder="example@mail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">رسالتك</label>
+                    <textarea id="message" rows="4" placeholder="اكتب رسالتك هنا..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn">إرسال الرسالة</button>
+                <p class="status" id="formStatus"></p>
+            </form>
+            <!-- Popup النجاح -->
+                <div id="successPopup" class="success-popup">
+                <div class="popup-box">
+                    <h3>✔️ تم إرسال الرسالة بنجاح!</h3>
+                    <p>سنتواصل معك في أقرب وقت ❤️</p>
+                    <button id="closePopup">تم</button>
+                </div>
+                </div>
+
+            <!-- ◼◼ معلومات التواصل ◼◼ -->
+            <div class="contact-info">
+                <h3>📞 معلومات التواصل</h3>
+
+                <p>إذا لديك أي استفسار، يمكنك التواصل معنا عبر:</p>
+
+                <div class="info-item">
+                    <span>📧</span>  
+                    <p>support@dawarly.com</p>
+                </div>
+
+                <div class="info-item">
+                    <span>📱</span>
+                    <p>01149533949</p>
+                </div>
+
+                <div class="info-item">
+                    <span>📍</span>
+                    <p>القاهرة - مصر</p>
+                </div>
+
+                <h3 class="social-title">تابعنا</h3>
+                <div class="social-links">
+                    <a href="#">📘 فيسبوك</a>
+                    <a href="#">📸 إنستجرام</a>
+                    <a href="#">🎥 تيك توك</a>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>&copy; دورلي حاجتي | مشروع مدرسي 2025 / 2026</p>
+    </footer>
+
+    <script src="contact.js"></script>
+    <script src="navbar.js"></script>
+</body>
+</html>

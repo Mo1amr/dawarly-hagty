@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دورلي حاجتي</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <h1 class="logo">دورلي حاجتي</h1>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">الرئيسية</a></li>
+            <li><a href="products.html">كراكيب</a></li>
+            <li><a href="add-item.html">أضف منتج</a></li>
+            <li><a href="talents.html">المواهب</a></li>
+            <li><a href="talent-grid.html">الفيديوهات</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+            <li id="adminLink" style="display:none;">
+            <a href="admin.html">🛠 لوحة التحكم</a>
+            </li>
+            <!-- مكان المستخدم بعد تسجيل الدخول -->
+            <li id="userBox"></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h2>ساعد غيرك... واستفيد بحاجتك القديمة</h2>
+        <p>
+            موقع "دورلي حاجتي" بيربط الناس اللي عندها حاجات مش محتجاها
+            بالناس اللي محتاجينها.
+        </p>
+
+        <!-- زر تسجيل الدخول -->
+        <a href="#" class="btn" id="openLogin">تسجيل الدخول</a>
+    </div>
+</section>
+
+<!-- LOGIN MODAL -->
+<div class="modal" id="loginModal">
+    <div class="modal-box">
+
+        <h3 id="formTitle">تسجيل الدخول</h3>
+
+        <!-- email -->
+        <input type="email" id="email" placeholder="البريد الإلكتروني">
+
+        <!-- password -->
+        <input type="password" id="password" placeholder="كلمة المرور">
+
+        <!-- avatar -->
+        <input type="file" id="avatar" accept="image/*">
+
+        <!-- buttons -->
+        <button class="btn" id="loginBtn">دخول</button>
+
+        <p>
+            ليس لديك حساب؟
+            <span id="switchMode" style="cursor:pointer;color:blue;">
+                إنشاء حساب
+            </span>
+        </p>
+
+        <button class="btn" id="closeLogin">إغلاق</button>
+
+    </div>
+</div>
+
+<footer>
+    <p>&copy; دورلي حاجتي | مشروع مدرسي 2025 / 2026</p>
+</footer>
+<script src="navbar.js"></script>
+</body>
+</html>

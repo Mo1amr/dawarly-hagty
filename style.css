@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo' , sans-serif;
+}
+body {
+    background-color: #f7f1e3;
+    color: #4a3c2a;
+}
+.navbar {
+    background-color: #d2b48c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.navbar a {
+    text-decoration: none;
+    color: #4a3c2a;
+    font-weight: 600;
+    transition: 0.3s; 
+} 
+.navbar a:hover,
+.navbar a:active {
+    color: #fff;
+}
+.hero {
+    background-image: url(image/pexels-vince-2227832.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba( 0, 0, 0, 0.4);
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    animation: fadeInUp 2s ease;
+}
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+.btn {
+    display: inline-block;
+    background-color: #b68d40;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.btn:hover {
+    background-color: #8b6b2f;
+    transform: scale(1.05);
+}
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #d2b48c;
+    margin-top: 40px;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ===============================
+   LOGIN / SIGNUP MODAL (إضافة فقط)
+=============================== */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    z-index: 999;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 14px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    animation: fadeInUp 0.4s ease;
+}
+
+/* inputs */
+.modal-box input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+}
+
+.modal-box input:focus {
+    border-color: #b68d40;
+    box-shadow: 0 0 6px rgba(182,141,64,0.4);
+}
+
+/* switch text */
+#switchText {
+    text-align: center;
+    font-size: 14px;
+}
+
+#switchMode {
+    color: #b68d40;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#switchMode:hover {
+    color: #8b6b2f;
+}
+
+
+/* ===============================
+   إعداد المتغيرات والألوان العامة
+=============================== */
+:root {
+  --bg: #f6efe6;
+  --card: #E6D7C2;
+  --accent: #6E4228;
+  --muted: #8B6B4A;
+  --shadow: rgba(46,34,20,0.12);
+  --radius: 16px;
+  --max-width: 1200px;
+  --gap: 20px;
+}
+
+/* ===============================
+   القواعد العامة
+=============================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Arial, "Noto Kufi Arabic", sans-serif;
+  background: var(--bg);
+  color: var(--accent);
+  line-height: 1.6;
+}
+
+.container {
+  width: calc(100% - 40px);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* ===============================
+   شريط التنقل (Navbar)
+=============================== */
+.navbar {
+  background-color: #d2b48c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid rgba(110, 66, 40, 0.3);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #fff;
+}
+
+/* ===============================
+   العنوان ومحرك البحث
+=============================== */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 40px 0 25px;
+  gap: 15px;
+}
+
+.top-bar h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--accent);
+}
+
+.top-right input[type="search"] {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(110, 66, 40, 0.3);
+  background: #fff;
+  outline: none;
+  width: 260px;
+  font-size: 1rem;
+  color: var(--accent);
+  transition: all 0.3s ease;
+}
+
+.top-right input[type="search"]:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 8px rgba(110, 66, 40, 0.25);
+  background-color: #fffaf5;
+}
+
+/* ===============================
+   شبكة المنتجات
+=============================== */
+.products-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    padding: 20px 0;
+}
+
+
+/* ===============================
+   كارت المنتج
+=============================== */
+.product-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform .25s, box-shadow .25s;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.product-title {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.product-meta {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #7e4a1e;
+}
+
+.product-card .btn {
+    background: #7e4a1e;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: none;
+    transition: 0.2s;
+}
+
+.product-card .btn:hover {
+    background: #b37749;
+}
+
+
+/* صورة المنتج */
+.img-wrap {
+    width: 100%;
+    aspect-ratio: 1/1; /* يخلي كل الصور مربعة ومنسقة */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+
+.product-card:hover .img-wrap img {
+  transform: scale(1.07);
+}
+
+/* تفاصيل المنتج */
+.card-body {
+  padding: 14px 16px 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.product-title {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.product-meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* تذييل الكارت */
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.price {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #4a2b17;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(46, 34, 20, 0.25);
+}
+
+/* ===============================
+   الفوتر
+=============================== */
+.site-footer {
+  padding: 22px 0;
+  border-top: 1px solid rgba(110, 66, 40, 0.06);
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+  background: #f3e8d2;
+}  
+
+/* ====== تنسيق شريط البحث والفئات ====== */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-bar select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(110, 66, 40, 0.3);
+  background: #fff;
+  font-size: 1rem;
+  color: var(--accent);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-bar select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 6px rgba(110, 66, 40, 0.25);
+}
+
+.search-bar input[type="search"] {
+  flex: 1;
+}
+
+/* ===============================
+   استجابة الموبايل
+=============================== */
+@media (max-width: 768px) {
+
+  /* ===== Navbar ===== */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  /* ===== Containers ===== */
+  .container {
+    width: calc(100% - 30px);
+  }
+
+  /* ===== Hero (لو موجود في الصفحة الرئيسية) ===== */
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  /* ===== Products Page ===== */
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .top-right input,
+  .search-bar input {
+    width: 100%;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* ===== Cards ===== */
+  .product-card {
+    margin-bottom: 10px;
+  }
+
+  .img-wrap {
+    aspect-ratio: 1/1;
+  }
+
+  /* ===== Contact Page ===== */
+  .contact-box {
+    grid-template-columns: 1fr;
+    padding: 25px;
+    gap: 20px;
+  }
+
+  /* ===== Add Product Page ===== */
+  .add-form {
+    gap: 14px;
+  }
+
+  input, select, textarea {
+    font-size: 14px;
+  }
+
+  /* ===== Footer ===== */
+  footer,
+  .site-footer {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+
+
+
+@media (max-width: 480px) {
+
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .hero {
+    height: 70vh;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Products */
+  .product-title {
+    font-size: 16px;
+  }
+
+  .price {
+    font-size: 15px;
+  }
+
+  /* Forms */
+  input, select, textarea {
+    font-size: 13px;
+    padding: 9px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+
+  /* Contact popup */
+  .popup-box {
+    width: 95%;
+  }
+}
