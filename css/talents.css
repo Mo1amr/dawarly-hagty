@@ -1,0 +1,348 @@
+/* ===============================
+   الألوان العامة والمتغيرات
+=============================== */
+:root {
+  --bg: #f6efe6;
+  --card: #E6D7C2;
+  --accent: #6E4228;
+  --muted: #8B6B4A;
+  --shadow: rgba(46,34,20,0.12);
+  --radius: 16px;
+  --max-width: 1200px;
+  --gap: 20px;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, "Noto Kufi Arabic", sans-serif;
+  background: var(--bg);
+  color: var(--accent);
+  line-height: 1.6;
+}
+
+/* ===============================
+   الشريط العلوي (Navbar)
+=============================== */
+.navbar {
+  background-color: #d2b48c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid rgba(110, 66, 40, 0.3);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #fff;
+}
+
+/* ===============================
+   العناوين العامة
+=============================== */
+.container {
+  width: calc(100% - 40px);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+h2 {
+  color: var(--accent);
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+p {
+  color: var(--muted);
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* ===============================
+   شبكة المواهب
+=============================== */
+.talents-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.talents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--gap);
+  margin-top: 30px;
+}
+
+.talent-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.4), var(--card));
+  border-radius: var(--radius);
+  box-shadow: 0 8px 18px var(--shadow);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.talent-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 36px rgba(46, 34, 20, 0.18);
+}
+
+/* محتوى الموهبة */
+.talent-media img, .talent-media video {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.talent-info {
+  padding: 16px;
+}
+
+.talent-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--accent);
+  margin: 8px 0;
+}
+
+.talent-category {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.talent-desc {
+  font-size: 0.95rem;
+  margin-top: 10px;
+  color: var(--accent);
+}
+
+/* ===============================
+   نموذج إضافة موهبة
+=============================== */
+.add-talent-section {
+  margin-top: 60px;
+  padding: 30px;
+  background: #f3e8d2;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 16px var(--shadow);
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: right;
+}
+
+label {
+  font-weight: bold;
+  color: var(--accent);
+}
+
+input, select, textarea {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(110, 66, 40, 0.3);
+  background: #fff;
+  font-size: 1rem;
+  color: var(--accent);
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 8px rgba(110, 66, 40, 0.25);
+}
+
+.preview {
+  background: #fff;
+  border: 1px dashed rgba(110, 66, 40, 0.3);
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #4a2b17;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   الفوتر
+=============================== */
+.site-footer {
+  padding: 20px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+  background: #f3e8d2;
+  margin-top: 60px;
+}
+
+/* ===============================
+   استجابة الموبايل
+=============================== */
+@media (max-width: 1024px) {
+
+  .navbar {
+    padding: 15px 25px;
+  }
+
+  .navbar ul {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .talents-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .talent-media img,
+  .talent-media video {
+    height: 200px;
+  }
+
+  .add-talent-section {
+    padding: 25px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .talents-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+  }
+
+  .talent-media img,
+  .talent-media video {
+    height: 230px;
+  }
+
+  .add-talent-section {
+    padding: 20px;
+  }
+
+  input, select, textarea {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .navbar {
+    padding: 12px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .talents-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .talent-card {
+    border-radius: 12px;
+  }
+
+  .talent-media img,
+  .talent-media video {
+    height: 240px;
+  }
+
+  .talent-info {
+    padding: 12px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  input, select, textarea {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .add-talent-section {
+    padding: 15px;
+  }
+}

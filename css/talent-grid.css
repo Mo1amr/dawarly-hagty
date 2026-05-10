@@ -1,0 +1,294 @@
+:root {
+  --bg: #f6efe6;
+  --card: #E6D7C2;
+  --accent: #6E4228;
+  --muted: #8B6B4A;
+  --radius: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: var(--bg);
+  color: var(--accent);
+}
+
+/* container */
+.container {
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* navbar */
+.navbar {
+  background: #d2b48c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.navbar a.active {
+  color: #fff;
+}
+
+/* top bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+  padding: 0 20px;   /* 👈 مهم عشان مفيش عنصر يطلع بره */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.top-bar h2 {
+  margin: 0;
+}
+/* button */
+.btn {
+  background: var(--accent);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #4a2b17;
+}
+
+/* grid */
+.talent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center; /* 👈 مهم */
+}
+
+/* card */
+/* ✅ الفيديو بعد التعديل */
+.talent-card {
+  width: 100%;
+  max-width: 320px;   /* 👈 بدل 260 */
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.talent-card:hover {
+  transform: translateY(-6px);
+}
+
+/* 🎬 الفيديو النهائي */
+.talent-card video {
+  width: 100%;
+  height: 230px;   /* 👈 بدل 180 */
+  object-fit: cover;
+  background: #000;
+  display: block;
+}
+
+/* hover بسيط */
+.talent-card video {
+  transition: transform 0.3s ease;
+}
+
+.talent-card:hover video {
+  transform: scale(1.03);
+}
+/* card body */
+.card-body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+ /* card footer */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+/* delete */
+.delete-btn {
+  background: #b22222;
+}
+
+.delete-btn:hover {
+  background: #8b0000;
+}
+
+/* modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-box input,
+.modal-box textarea,
+.modal-box select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+
+  .navbar {
+    padding: 15px 25px;
+  }
+
+  .navbar ul {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .top-bar {
+    padding: 0 15px;
+  }
+
+  .talent-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+  }
+
+  .talent-card {
+    max-width: 300px;
+  }
+
+  .talent-card video {
+    height: 210px;
+  }
+}
+  
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .talent-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .talent-card {
+    max-width: 100%;
+  }
+
+  .talent-card video {
+    height: 220px;
+  }
+
+  .card-footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+} 
+
+
+@media (max-width: 480px) {
+
+  .navbar {
+    padding: 12px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .top-bar h2 {
+    font-size: 18px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .talent-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .talent-card {
+    max-width: 100%;
+  }
+
+  .talent-card video {
+    height: 240px;
+  }
+
+  .card-body {
+    padding: 10px;
+  }
+
+  .card-footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .modal-box {
+    width: 90%;
+  }
+}

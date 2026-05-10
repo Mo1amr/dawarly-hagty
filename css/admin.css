@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+  background: #f7f1e3;
+  color: #4a3c2a;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #d2b48c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #4a3c2a;
+  font-weight: bold;
+}
+
+/* CONTAINER */
+.container {
+  padding: 20px;
+}
+
+h2 {
+  margin-top: 30px;
+  border-right: 4px solid #b68d40;
+  padding-right: 10px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 15px;
+  margin: 12px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card video {
+  width: 220px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+/* BUTTONS */
+button {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.approve {
+  background: green;
+  color: white;
+}
+
+.reject {
+  background: red;
+  color: white;
+}
+/* responsive */
+/* =======================
+   TABLET
+======================= */
+@media (max-width: 1024px) {
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card video {
+    width: 100%;
+    height: 220px;
+  }
+}
+
+/* =======================
+   MOBILE LARGE
+======================= */
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .card video {
+    width: 100%;
+    height: 240px;
+  }
+}
+
+/* =======================
+   MOBILE SMALL
+======================= */
+@media (max-width: 480px) {
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .card video {
+    height: 220px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
